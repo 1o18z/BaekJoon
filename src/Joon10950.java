@@ -1,12 +1,15 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
+
 public class Joon10950 {
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        int T = scan.nextInt();
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
         int arr[] = new int[T];
         for(int i=0; i<T; i++){
-                int A = scan.nextInt();
-                int B = scan.nextInt();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+                int A = Integer.parseInt(st.nextToken());
+                int B = Integer.parseInt(st.nextToken());
                 arr[i] = A + B;
             }
         for(int j=0; j<arr.length; j++){
