@@ -3,14 +3,6 @@ public class Joon2753 {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int year = scan.nextInt();
-        int luck = 0;
-        if(year % 4 == 0 && year % 100 != 0){
-            luck = 1;
-        } else if(year % 400 == 0){
-            luck = 1;
-        } else {
-            luck = 0;
-        }
-        System.out.println(luck);
+        System.out.println((year % 4 == 0) ? ((year % 400 == 0) ? 1 : year % 100 == 0 ? 0 : 1) : 0);
     }
 }
