@@ -1,19 +1,10 @@
-import java.util.Scanner;
+import java.io.*;
+
 public class Joon14681 {
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        int x = scan.nextInt();
-        int y = scan.nextInt();
-        int square = 0;
-        if(x > 0 && y > 0){
-            square = 1;
-        } else if(x > 0 && y < 0){
-            square = 4;
-        } else if(x < 0 && y > 0){
-            square = 2;
-        } else{
-            square = 3;
-        }
-        System.out.println(square);
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int x = Integer.parseInt(br.readLine());
+        int y = Integer.parseInt(br.readLine());
+        System.out.println(x>0 ? y>0 ? 1 : 4 :y>0 ? 2 : 3);
     }
 }
