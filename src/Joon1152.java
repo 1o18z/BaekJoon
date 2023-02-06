@@ -1,11 +1,12 @@
+import java.io.*;
 import java.util.*;
 
 public class Joon1152 {
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    String s = scan.nextLine();
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String s = br.readLine();
 
-    StringTokenizer st = new StringTokenizer(s, " ");  // 공백을 구분
-    System.out.println(st.countTokens()); // 공백 수 출력
+    StringTokenizer st = new StringTokenizer(s, " ");
+    System.out.println(st.countTokens());
   }
 }
